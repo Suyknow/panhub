@@ -105,7 +105,7 @@
 
     <!-- 热搜推荐 -->
     <section v-if="!searchState.searched && !searchState.loading" class="hot-search-section">
-      <HotSearchTabs :on-search="quickSearch" />
+      <HotSearchSection :on-search="quickSearch" />
     </section>
   </div>
 </template>
@@ -113,7 +113,7 @@
 <script setup lang="ts">
 import SearchBox from "./SearchBox.vue";
 import ResultGroup from "./ResultGroup.vue";
-import HotSearchTabs from "./HotSearchTabs.vue";
+import HotSearchSection from "./HotSearchSection.vue";
 import { PLATFORM_INFO } from "~/config/plugins";
 import type { MergedLinks } from "~/server/core/types/models";
 
@@ -678,7 +678,7 @@ function visibleSorted(items: any[]) {
   }
 
   .hot-search-section {
-    /* HotSearchTabs 组件内部已支持深色模式 */
+    /* HotSearchSection 组件内部已支持深色模式 */
   }
 }
 
